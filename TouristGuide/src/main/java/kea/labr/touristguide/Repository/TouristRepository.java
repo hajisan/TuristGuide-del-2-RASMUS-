@@ -15,14 +15,14 @@ public class TouristRepository {
 
     public TouristRepository() {
         allTouristAttraction();
-    }
+    } // Konstuktør der initialiserer listen over alle turistattraktioner
 
-    public TouristAttraction addAttraction(TouristAttraction touristAttraction) {
+    public TouristAttraction addAttraction(TouristAttraction touristAttraction) { // Metode til at tilføje en ny attraktion
         touristAttractions.add(touristAttraction);
         return touristAttraction;
     }
 
-    public TouristAttraction addTouristAttraction(String name, String description, String city, List<Tags> tags) {
+    public TouristAttraction addTouristAttraction(String name, String description, String city, List<Tags> tags) { // Opretter og tilføjer en ny turistattraktion baseret på de givne parametre
         TouristAttraction touristAttraction = new TouristAttraction(name, description, city);
         touristAttraction.setTags(tags);
         this.touristAttractions.add(touristAttraction);
@@ -33,7 +33,7 @@ public class TouristRepository {
         return touristName;
     }
 
-    public void allTouristAttraction() {
+    public void allTouristAttraction() { // Initialiserer listen med foruddefinerede turistattraktioner
         addTouristAttraction("Tivoli", "En af verdens ældste forlystelsesparker med smukke haver, forlystelser og restauranter.", "København", List.of(Tags.CHILD_FRIENDLY, Tags.DISABILITY_FRIENDLY));
         addTouristAttraction("Den Lille Havfrue", "Den ikoniske statue inspireret af H.C. Andersens eventyr, placeret ved Langelinie.", "København", List.of(Tags.FOR_FREE, Tags.DISABILITY_FRIENDLY));
         addTouristAttraction("Legoland", "En populær familiepark fyldt med forlystelser og imponerende LEGO-modeller.", "Billund", List.of(Tags.CHILD_FRIENDLY, Tags.DISABILITY_FRIENDLY));
@@ -53,9 +53,9 @@ public class TouristRepository {
 
     public List<TouristAttraction> getAllTouristAttractions() {
         return touristAttractions;
-    }
+    } // Returnerer listen over alle turistattraktioner
 
-    public TouristAttraction updateTouristAttraction(String name, TouristAttraction updateTouristAttraction) {
+    public TouristAttraction updateTouristAttraction(String name, TouristAttraction updateTouristAttraction) { // Opdaterer en eksisterende attraktion baseret på navnet.
         for (int i = 0; i < touristAttractions.size(); i++) {
             if (touristAttractions.get(i).getName().equalsIgnoreCase(name)) {
                 // Bevar navnet fra den eksisterende attraktion
@@ -67,7 +67,7 @@ public class TouristRepository {
         return null; // Returnér null, hvis attraktionen ikke blev fundet
     }
 
-    public TouristAttraction findTouristAttractionByName(String name) {
+    public TouristAttraction findTouristAttractionByName(String name) { // Finder en attraktion baseret på navnet
         for(TouristAttraction t1 : touristAttractions) {
             if(t1.getName().equalsIgnoreCase(name)) {
                 return t1;
@@ -76,7 +76,7 @@ public class TouristRepository {
         return null;
     }
 
-    public TouristAttraction deleteTouristAttraction(String name) {
+    public TouristAttraction deleteTouristAttraction(String name) { // Sletter en attraktion, også baseret på navnet
         TouristAttraction attractionToDelete = findTouristAttractionByName(name);
 
         if (attractionToDelete != null) {
@@ -86,7 +86,7 @@ public class TouristRepository {
         return null; // Returnér null, hvis attraktionen ikke findes
     }
 
-    public List<Tags> getTags(String attractionName) {
+    public List<Tags> getTags(String attractionName) { // Returnerer tags fr en attraktion baseret på navnet
         for(TouristAttraction i : touristAttractions) {
             if (attractionName.equalsIgnoreCase(i.getName())) {
                 return i.getTags();
@@ -95,7 +95,7 @@ public class TouristRepository {
         return null;
     }
 
-    public List<String> allCities() {
+    public List<String> allCities() { // Returnerer en liste over alle tilgængelige byer
         List<String> cities = new ArrayList<>();
         cities.add("København");
         cities.add("Aarhus");
