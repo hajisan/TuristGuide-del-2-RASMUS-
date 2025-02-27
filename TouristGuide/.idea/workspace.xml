@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9c566e1-3252-4815-91de-40c471c1f26b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kea/labr/touristguide/Model/Tags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kea/labr/touristguide/Model/Tags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kea/labr/touristguide/Model/TouristAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kea/labr/touristguide/Model/TouristAttraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TouristGuideApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "nima/kommentering-model__package",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/nima/Documents/Road to coding/Repositories/TuristGuide-del-2/TouristGuide",
     "node.js.detected.package.eslint": "true",
@@ -84,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740644793564</updated>
       <workItem from="1740644794830" duration="3238000" />
-      <workItem from="1740648042283" duration="301000" />
+      <workItem from="1740648042283" duration="973000" />
     </task>
     <servers />
   </component>
