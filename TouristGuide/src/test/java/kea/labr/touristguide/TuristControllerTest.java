@@ -41,9 +41,9 @@ class TouristControllerTest {
 
         mockMvc.perform(get("/attractions/{name}", name))
                 .andExpect(status().isOk())
-                .andExpect(view().name("index"))  // ✅ Tjekker at "index.html" returneres
-                .andExpect(model().attributeExists("attraction"))  // ✅ Tjekker at model-objektet er til stede
-                .andExpect(model().attribute("attraction", attraction));  // ✅ Tjekker at attraktionen er i model
+                .andExpect(view().name("index"))  //  Tjekker at "index.html" returneres
+                .andExpect(model().attributeExists("attraction"))  //  Tjekker at model-objektet er til stede
+                .andExpect(model().attribute("attraction", attraction));  //  Tjekker at attraktionen er i model
 
     }
 }
