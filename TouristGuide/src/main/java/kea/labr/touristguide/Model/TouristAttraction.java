@@ -12,7 +12,7 @@ public class TouristAttraction {
     private String city; // Byen, hvor attraktionen befinder sig
 
     // Tom konstruktør (bruges når objektet oprettes uden værdier)
-    public TouristAttraction() {
+    public TouristAttraction(String name, String forlystelsesparkMidtIKøbenhavnCentrum) {
     }
 
     // Konstruktør til at oprette en attraktion med navn, beskrivelse og by

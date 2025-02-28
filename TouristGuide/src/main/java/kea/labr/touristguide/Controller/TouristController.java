@@ -3,8 +3,6 @@ package kea.labr.touristguide.Controller;
 import kea.labr.touristguide.Model.Tags;
 import kea.labr.touristguide.Model.TouristAttraction;
 import kea.labr.touristguide.Service.TouristService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -58,7 +56,8 @@ public class TouristController {
     // Metode for at tilføje en ny attraktion
     @GetMapping("/attractions/add")
     public String addAttraction(Model model) {
-        model.addAttribute("attraction", new TouristAttraction()); // Opretter en tom attraktion
+        String name = "Tivoli"; // Navnet på attraktionen
+        model.addAttribute("attraction", new TouristAttraction(name, "Forlystelsespark midt i København centrum")); // Opretter en tom attraktion
         model.addAttribute("tags", Tags.values()); // Henter tags-værdier fra Tags-enum
         return "newAttraction"; // Returnerer newAttraction.html
     }
