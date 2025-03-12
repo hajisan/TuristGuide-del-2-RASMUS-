@@ -29,12 +29,13 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: TouristGuide # <-- Tilføjet denne linje
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/TouristGuide/target/*.jar' # <-- Opdateret sti
 
   deploy:
     runs-on: ubuntu-latest
