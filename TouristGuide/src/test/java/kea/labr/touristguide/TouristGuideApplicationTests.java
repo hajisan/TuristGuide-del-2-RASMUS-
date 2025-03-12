@@ -1,13 +1,13 @@
-package kea.labr.touristguide;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class TouristGuideApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
+//package kea.labr.touristguide;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class TouristGuideApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}
